@@ -48,16 +48,16 @@
     };
 
     behaviors {
-        // scroll_listener: scroll_listener {
-        //     compatible = "zmk,input-behavior-listener";
-        //     device = <&vtrackball>;  // ※動かない場合は &vtrackball などに変える必要があります
-        //     layers = <3>;           // Layer 3 (scroll-layers) が有効な時だけ発動
-        //     evt-type = <INPUT_EV_REL>;
-        //     x-input-code = <INPUT_REL_HWHEEL>;
-        //     y-input-code = <INPUT_REL_WHEEL>;
-        //     y-invert;               // 下記「調整ポイント」参照
-        //     scale-multiplier = <1>; // 感度調整 (値を大きくすると速くなる)
-        // };
+        scroll_listener: scroll_listener {
+            compatible = "zmk,input-behavior-listener";
+            device = <&trackball>;  // 右側のトラックボールを参照
+            layers = <3>;           // Layer 3 (scroll-layers) が有効な時だけ発動
+            evt-type = <INPUT_EV_REL>;
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+            y-invert;               // 下記「調整ポイント」参照
+            scale-multiplier = <1>; // 感度調整 (値を大きくすると速くなる)
+        };
     };
 
     keymap {
@@ -69,7 +69,7 @@
 &kp TAB              &kp Q          &kp W             &kp E             &kp R      &kp T            &kp Y      &kp U      &kp I        &kp O           &kp P           &kp LEFT_BRACKET
 &lt 1 RIGHT_CONTROL  &kp A          &kp S             &kp D             &kp F      &kp G            &kp H      &kp J      &kp K        &kp L           &kp SEMI        &kp RIGHT_BRACKET
 &kp LEFT_SHIFT       &kp Z          &kp X             &kp C             &kp V      &kp B            &kp N      &kp M      &kp COMMA    &kp DOT         &kp UP_ARROW    &kp FSLH
-&kp LEFT_CONTROL     &kp RIGHT_ALT  &kp LEFT_COMMAND  &lt 1 LANGUAGE_1  &kp SPACE  &lt 3 BACKSPACE  &mkp LCLK  &kp ENTER  &lt 1 LANG2  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LEFT_CONTROL     &kp RIGHT_ALT  &kp LGUI  &lt 1 LANGUAGE_1  &kp SPACE  &lt 3 BACKSPACE  &mkp LCLK  &kp ENTER  &lt 1 LANG2  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
