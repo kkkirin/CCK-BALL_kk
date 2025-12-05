@@ -48,16 +48,16 @@
     };
 
     behaviors {
-        scroll_listener: scroll_listener {
-            compatible = "zmk,input-behavior-listener";
-            device = <&vtrackball>;  // ※動かない場合は &vtrackball などに変える必要があります
-            layers = <3>;           // Layer 3 (scroll-layers) が有効な時だけ発動
-            evt-type = <INPUT_EV_REL>;
-            x-input-code = <INPUT_REL_HWHEEL>;
-            y-input-code = <INPUT_REL_WHEEL>;
-            y-invert;               // 下記「調整ポイント」参照
-            scale-multiplier = <1>; // 感度調整 (値を大きくすると速くなる)
-        };
+        // scroll_listener: scroll_listener {
+        //     compatible = "zmk,input-behavior-listener";
+        //     device = <&vtrackball>;  // ※動かない場合は &vtrackball などに変える必要があります
+        //     layers = <3>;           // Layer 3 (scroll-layers) が有効な時だけ発動
+        //     evt-type = <INPUT_EV_REL>;
+        //     x-input-code = <INPUT_REL_HWHEEL>;
+        //     y-input-code = <INPUT_REL_WHEEL>;
+        //     y-invert;               // 下記「調整ポイント」参照
+        //     scale-multiplier = <1>; // 感度調整 (値を大きくすると速くなる)
+        // };
     };
 
     keymap {
