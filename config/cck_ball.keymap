@@ -50,7 +50,7 @@
     behaviors {
         scroll_listener: scroll_listener {
             compatible = "zmk,input-behavior-listener";
-            device = <&trackball>;  // ※動かない場合は &vtrackball などに変える必要があります
+            device = <&vtrackball>;  // ※動かない場合は &vtrackball などに変える必要があります
             layers = <3>;           // Layer 3 (scroll-layers) が有効な時だけ発動
             evt-type = <INPUT_EV_REL>;
             x-input-code = <INPUT_REL_HWHEEL>;
