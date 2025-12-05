@@ -3,7 +3,8 @@ id: cck_ball
 name: CCK_BALL
 type: shield
 url: https://github.com/Bastardkb/Charybdis/
-requires: [pro_micro]
+requires:
+  - nice_nano
 features:
   - keys
   - pointer
